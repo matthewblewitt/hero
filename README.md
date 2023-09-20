@@ -1,6 +1,6 @@
 # Hero score
 
-In the repo you'll mind a TS project running the serverless framework. 
+In the repo you'll find a TS project running the serverless framework. 
 
 I chose zod to handle request payloads and types, node-fetch for the fetching and Big.js to handle number precision. Considered using something like `lossless-json` when parsing the hero score in the request body, but felt uncessary at the 0-100 range.
 

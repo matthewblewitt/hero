@@ -7,16 +7,16 @@ export const getErrorMessage = (error: unknown) =>
 
 export const parseApiEvent = <T>(
   event: APIGatewayProxyEvent,
-  schema: ZodSchema<T>,
+  schema: ZodSchema<T>
 ): T => {
   if (event.body === null) {
-    throw new Error("null event body");
+    throw new Error("null api event body");
   }
 
   const parsed = schema.safeParse(JSON.parse(event.body));
 
   if (!parsed.success) {
-    throw new Error(JSON.stringify(parsed.error));
+    throw new Error(`Invalid api event body ${JSON.stringify(parsed.error)}`);
   }
   return parsed.data;
 };
@@ -33,6 +33,6 @@ export const createCsv = async (path: string, content: string) => {
   try {
     await promises.writeFile(path, content);
   } catch (err) {
-    console.error(err);
+    throw new Error(`Failed to create csv ${getErrorMessage(err)}`);
   }
 };

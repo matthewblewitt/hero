@@ -39,7 +39,7 @@ describe("getInvisibilityScore", () => {
 });
 
 describe("getUserScore", () => {
-  test("return the invisbility status, score and super hero score ", () => {
+  test("returns the invisbility status, score and super hero score", () => {
     const minMaleScore = getUserScore(0, {
       dob: {
         age: maxAge,

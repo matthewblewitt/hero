@@ -19,7 +19,7 @@ const score =
 
       const result = getUserScore(score.superheroScore, user);
 
-      createCsv("./score.csv", objToCSV([result]));
+      await createCsv("./score.csv", objToCSV([result]));
 
       return {
         statusCode: 200,

@@ -1,0 +1,18 @@
+service: hero-score
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+
+functions:
+  heroScore:
+    handler: src/handlers/score/index.handler
+    events:
+      - http:
+          method: POST
+          path: api/score

@@ -1,0 +1,29 @@
+{
+  "name": "hero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "sls offline start --httpPort 4500 --stage local --reloadHandler",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest utils"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.121",
+    "@types/big.js": "^6.2.0",
+    "prettier": "^3.0.3",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-typescript": "^2.1.5",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.4"
+  },
+  "dependencies": {
+    "big.js": "^6.2.1",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.2"
+  }
+}

@@ -6,5 +6,5 @@ I chose zod to handle request payloads and types, node-fetch for the fetching an
 
 The csv file output can be found at `./score.csv`. Would have attempted something more involved like writing to S3, but ran out of time :D
 
-The application uses serverless-offline, to spin it up run `npm install` & `npm run dev`. This will make the endpoint avaliable at `http://localhost:4500/local/api/score`. There's a postman collectiont to hit if you like.
+The application uses serverless-offline, to spin it up run `npm install` & `npm run dev`. This will make the endpoint available at `http://localhost:4500/local/api/score`. There's a postman collectiont to hit if you like.
 
